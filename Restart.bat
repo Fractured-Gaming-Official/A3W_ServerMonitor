@@ -5,15 +5,15 @@ taskkill /f /im "arma3client.exe" /t
 taskkill /f /im "servermonitor.bat" /t
 taskkill /f /im "servermonitor.exe" /t
 :: Server Params (Path to exe, noPause, noSound, noSplash, filePatching, autoInit, Profile Name, Path to Profile,Path to config file, Path to cfg, Mods, Battleye Path, Map, Server Port)
-start /wait /b C:\Games\Arma3\xxxxxx.exe -noPause -noSound -nosplash -filePatching -autoInit -name=default -profiles=C:\Games\Arma3\xxxxxx -config=C:\Games\Arma3\xxxxxx.cfg -cfg=C:\Games\Arma3\xxxxxx.cfg -mod=@CBA_A3 -BEPath=C:\Games\Arma3\xxBEfolder -world=Stratis -port=2302
+start /wait /b C:\Games\Arma3\A3Master\arma3server.exe -noPause -noSound -nosplash -filePatching -autoInit -name=default -profiles=C:\Games\Arma3\A3Master\Profiles -config=C:\Games\Arma3\A3Master\CONFIG_server.cfg -cfg=C:\Games\Arma3\A3Master\network.cfg.cfg -mod=@CBA_A3 -BEPath=C:\Games\Arma3\A3Master\Battleye -world=Tanoa -port=2302
 echo Server Initiated
 :bec
-taskkill /f /im  "bec.exe"
-timeout 10
+::taskkill /f /im  "bec.exe"
+::timeout 10
 :: Path to BEC Folder
-cd "C:\Games\Arma3\A3Master\BEC\"
+::cd "C:\Games\Arma3\A3Master\BEC\"
 :: Path to BEC.exe
-start "bec" "C:\Games\Arma3\A3Master\BEC\bec.exe" -f Config.cfg --dsc
+::start "bec" "C:\Games\Arma3\A3Master\BEC\bec.exe" -f Config.cfg --dsc
 @echo Server Bec initiated!
 :: =================If running headless client, replace "HC .exe" with name of headless client .exe and remove "::"=================
 :: @echo Waiting to launch Headless Client
